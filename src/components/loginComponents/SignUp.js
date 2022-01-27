@@ -8,47 +8,47 @@ export default function SignUp() {
     firstName: "",
     lastName: "",
     username: "",
+    email: "",
     password: "",
     confirmPassword: "",
-    email: "",
   };
   const onSubmit = (values) => {
     axios
-      .post("http://localhost:4000/register", values)
+      .post("http://localhost:4000/signup", values)
       .then((res) => {
-        console.log(res.data);
-        localStorage.setItem("firstName", res.data[0][0].firstName);
-        localStorage.setItem("lastName", res.data[0][0].lastName);
-        localStorage.setItem("username", res.data[0][0].username);
-        localStorage.setItem("id", res.data[0][0].id);
+        // console.log(res.data);
+        localStorage.setItem("ID", res.data[0][0].id);
+        localStorage.setItem("First name", res.data[0][0].firstname);
+        localStorage.setItem("Last name", res.data[0][0].lastname);
+        localStorage.setItem("Username", res.data[0][0].username);
+        localStorage.setItem("E-mail", res.data[0][0].email);
       })
       .catch((err) => console.log(err.response.data));
   };
   const validate = (values) => {
     const errors = {};
     if (!values.firstName) {
-      errors.firstName = "First name required";
+      errors.firstName = "*First name required";
     }
     if (!values.lastName) {
-      errors.lastName = "Last name required";
+      errors.lastName = "*Last name required";
     }
     if (!values.username) {
-      errors.username = "Username required";
+      errors.username = "*Username required";
     }
     if (!values.email) {
-      errors.email = "E-mail required";
+      errors.email = "*E-mail required";
     }
     if (!values.password) {
-      errors.password = "Password required";
+      errors.password = "*Password required";
     } else if (values.password.length < 8) {
-      errors.password = "Password must be longer than 8 characters.";
+      errors.password = "*Password must be longer than 8 characters";
     }
     if (!values.confirmPassword) {
-      errors.confirmPassword = "Please confirm password";
+      errors.confirmPassword = "*Please confirm password";
     } else if (values.password !== values.confirmPassword) {
-      errors.confirmPassword = "Passwords must match";
+      errors.confirmPassword = "*Passwords must match";
     }
-
     return errors;
   };
 
@@ -59,14 +59,10 @@ export default function SignUp() {
   });
 
   return (
-    <body id="form-body">
+    <div id="form-body">
       <div className="form-container">
         <h1 className="title">Create an account with us</h1>
-        <form
-          action="#"
-          className="form"
-          onSubmit={formik.handleSubmit}
-        >
+        <form className="form" onSubmit={formik.handleSubmit}>
           <div className="input-container">
             <div className="input-box">
               <span className="details">First Name</span>
@@ -83,7 +79,7 @@ export default function SignUp() {
             <div className="input-box">
               <span className="details">Last Name</span>
               <input
-              className="input-text"
+                className="input-text"
                 type="text"
                 name="lastName"
                 onChange={formik.handleChange}
@@ -95,7 +91,7 @@ export default function SignUp() {
             <div className="input-box">
               <span className="details">Username</span>
               <input
-              className="input-text"
+                className="input-text"
                 type="text"
                 name="username"
                 onChange={formik.handleChange}
@@ -107,7 +103,7 @@ export default function SignUp() {
             <div className="input-box">
               <span className="details">E-mail</span>
               <input
-              className="input-text"
+                className="input-text"
                 type="text"
                 name="email"
                 onChange={formik.handleChange}
@@ -119,7 +115,7 @@ export default function SignUp() {
             <div className="input-box">
               <span className="details">Password</span>
               <input
-              className="input-text"
+                className="input-text"
                 type="password"
                 name="password"
                 onChange={formik.handleChange}
@@ -131,7 +127,7 @@ export default function SignUp() {
             <div className="input-box">
               <span className="details">Confirm Password</span>
               <input
-              className="input-text"
+                className="input-text"
                 type="password"
                 name="confirmPassword"
                 onChange={formik.handleChange}
@@ -142,20 +138,27 @@ export default function SignUp() {
             </div>
           </div>
           <div className="button">
-            <input className="input-text" type="submit" value="Register" disabled={!formik.isValid}/>
+            <input
+              className="input-text"
+              type="submit"
+              value="Register"
+              disabled={!formik.isValid}
+            />
           </div>
         </form>
-        <div>
-        {formik.errors.firstName ? <div>{formik.errors.firstName}</div> : null}
-        {formik.errors.lastName ? <div>{formik.errors.lastName}</div> : null}
-        {formik.errors.username ? <div>{formik.errors.username}</div> : null}
-        {formik.errors.email ? <div>{formik.errors.email}</div> : null}
-        {formik.errors.password ? <div>{formik.errors.password}</div> : null}
-        {formik.errors.confirmPassword ? (
-          <div>{formik.errors.confirmPassword}</div>
-        ) : null}
+        <div className="errors-sign-up">
+          {formik.errors.firstName ? (
+            <div>{formik.errors.firstName}</div>
+          ) : null}
+          {formik.errors.lastName ? <div>{formik.errors.lastName}</div> : null}
+          {formik.errors.username ? <div>{formik.errors.username}</div> : null}
+          {formik.errors.email ? <div>{formik.errors.email}</div> : null}
+          {formik.errors.password ? <div>{formik.errors.password}</div> : null}
+          {formik.errors.confirmPassword ? (
+            <div>{formik.errors.confirmPassword}</div>
+          ) : null}
+        </div>
       </div>
-      </div>
-    </body>
+    </div>
   );
 }

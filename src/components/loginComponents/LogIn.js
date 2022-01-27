@@ -15,11 +15,14 @@ export default function Login(props) {
     axios
       .post("http://localhost:4000/login", values)
       .then((res) => {
-        localStorage.setItem("username", res.data.username);
-        localStorage.setItem("id", res.data.id);
-        localStorage.setItem("firstName", res.data.name);
+        // console.log(res.data);
+        localStorage.setItem("ID", res.data.id);
+        localStorage.setItem("First name", res.data.firstname);
+        localStorage.setItem("Last name", res.data.lastname);
+        localStorage.setItem("Username", res.data.username);
+        localStorage.setItem("E-mail", res.data.email);
         props.logFunction();
-        // navigate("/secret");
+        navigate('/secret')
       })
       .catch((err) => {
         console.log(err.response.data);
@@ -44,15 +47,15 @@ export default function Login(props) {
   });
 
   return (
-    <body id="form-body">
+    <div id="form-body">
       <div className="form-container">
         <h1 className="title">Log in</h1>
-        <form action="#" className="form" onSubmit={formik.handleSubmit}>
+        <form className="form" onSubmit={formik.handleSubmit}>
           <div className="input-container">
             <div className="input-box">
               <span className="details">Username</span>
               <input
-              className="input-text" 
+                className="input-text"
                 type="text"
                 name="username"
                 onChange={formik.handleChange}
@@ -63,7 +66,7 @@ export default function Login(props) {
             <div className="input-box">
               <span className="details">Password</span>
               <input
-              className="input-text" 
+                className="input-text"
                 type="password"
                 name="password"
                 onChange={formik.handleChange}
@@ -73,10 +76,14 @@ export default function Login(props) {
             </div>
           </div>
           <div className="button">
-          <input className="input-text"  type="submit" disabled={!formik.isValid}/>
+            <input
+              className="input-text"
+              type="submit"
+              disabled={!formik.isValid}
+            />
           </div>
         </form>
       </div>
-    </body>
+    </div>
   );
 }

@@ -77,3 +77,8 @@
   opacity: .9;
   transition: all 0.2s ease-out;
   }
+
+  .errors-sign-up {
+    color: rgb(221, 32, 32);
+    text-align: center;
+  }

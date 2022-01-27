@@ -1,14 +1,15 @@
 import React from 'react';
+import '../../../App.css';
 import './Cards.css';
-import RecipeCards from './Cards.js';
-import '../../App.css';
+import RecipeCards from './Cards.js'
+import SearchBar from './SearchBar';
 
-function CardItems() {
+export default function CardItems() {
   return (
-    <body id='cards-body'>
+    <div id='cards-body'>
     <div className='cards' id="recipe-cards">
       <h1>What would you like to make today?</h1>
-      <input className="search-recipes" type="text" placeholder='Search for a recipe...' />
+      <SearchBar />
       <div className='cards__container'>
         <div className='cards__wrapper'>
           <ul className='cards__items'>
@@ -48,8 +49,6 @@ function CardItems() {
         </div>
       </div>
     </div>
-    </body>
+    </div>
   );
 }
-
-export default CardItems;

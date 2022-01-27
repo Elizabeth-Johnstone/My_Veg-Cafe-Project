@@ -3,7 +3,7 @@ import "./Recipes.css";
 
 export default function AvocadoToast() {
   return (
-    <body id="recipe-body">
+    <div id="recipe-body">
       <div className="recipe-container">
         <h2 className="recipe-title">Open-Faced Avocado Melt</h2>
         <img
@@ -63,6 +63,6 @@ export default function AvocadoToast() {
           </p>
         </div>
       </div>
-    </body>
+    </div>
   );
 }
