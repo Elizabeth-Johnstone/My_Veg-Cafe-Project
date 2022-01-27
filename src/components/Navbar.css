@@ -1,0 +1,60 @@
+/* :root {
+  --text-color: #23833a;
+  --back-color: #f9fbf0
+} */
+
+.navbar-container {
+  background: #f9fbf0;
+  height: 80px;
+  display: flex;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+
+}
+
+.logo {
+  margin-left: 20px;
+  margin-top: 13px;
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  width: 60vw;
+  justify-content: end;
+  margin-right: 2rem;
+}
+
+.nav-links {
+  color: #23833a;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.nav-links:hover {
+  border-bottom: 4px solid #23833a;
+  transition: all 0.2s ease-out;
+}
+
+.btn {
+  border-radius: 2px;
+  background-color: transparent;
+  color: #23833a;
+  padding: 8px 20px;
+  border: 1px solid #23833a;
+  transition: all 0.3s ease-out;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background: #23833a;
+  color: #f9fbf0;
+}

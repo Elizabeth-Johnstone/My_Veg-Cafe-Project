@@ -1,0 +1,27 @@
+:root {
+  --text-color: #f9fbf0;
+}
+
+.welcome-container {
+  background: url('/Users/elizabethjohnstone/Documents/capstone-project/public/images/berries.jpg') center center/cover no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-container > h1 {
+  color: var(--text-color);
+  font-size: 100px;
+  margin-top: -100px;
+}
+
+.welcome-container > p {
+  margin-top: 8px;
+  color: var(--text-color);
+  font-size: 32px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
