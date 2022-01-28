@@ -12,17 +12,10 @@ app.use(cors());
 
 // Endpoints
 
-// const sendingUsers = await sequelize.query(`
-//   SELECT * FROM users
-//   `);
-// // console.log(sendingUsers)
-// res.status(200).send(sendingUsers);
-
 app.get("/recipes", async (req, res) => {
   const validUsers = await sequelize
     .query(`SELECT * FROM users`)
     .catch((error) => console.log(error));
-  // console.log(validUsers);
   res.status(200).send(validUsers);
 });
 
