@@ -25,8 +25,9 @@
     color: #23833a
   }
   
-  h1 {
+  .cards-title {
     text-align: center;
+    font-size: 18pt;
   }
   
   .cards__container {

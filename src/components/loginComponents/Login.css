@@ -1,9 +1,19 @@
+/* * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border:0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+} */
+
 #form-body {
   height: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 6%;
-  margin-bottom: 6%;
+  margin-top: 7%;
+  margin-bottom: 8%;
 }
 
 .form-container {
@@ -15,10 +25,14 @@
   background: #f9fbf0;
 }
 
-.title {
+.title-log-in {
   font-size: 25px;
-  padding-top: 35px;
+  /* margin: 100%; */
   color: #23833a; 
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .form .input-container{
@@ -78,7 +92,19 @@
   transition: all 0.2s ease-out;
   }
 
-  .errors-sign-up {
-    color: rgb(221, 32, 32);
+  .errors-sign-up, .errors-log-in {
+    color: rgb(77, 12, 12);
     text-align: center;
+  }
+
+.img-container {
+  width: 500px;
+}
+
+img {
+    display: flex;
+    width: 100%;
+    padding: 25px;
+    justify-content: center;
+    align-items: center
   }

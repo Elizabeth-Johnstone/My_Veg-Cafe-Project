@@ -7,7 +7,7 @@ import WelcomeSection from "./components/landingComponents/WelcomeSection";
 import CardItems from "./components/pages/Recipes/CardItems";
 import Favorites from "./components/pages/Favorites";
 import LogIn from "./components/loginComponents/LogIn";
-import Dashboard from "./components/loginComponents/Dashboard";
+import AfterLogin from "./components/loginComponents/AfterLogin";
 import SignUp from "./components/loginComponents/SignUp";
 import AvocadoToast from "./components/pages/Instructions/AvocadoToast";
 
@@ -29,8 +29,8 @@ function App() {
           <Route exact path="*" element={<WelcomeSection />} />
           <Route exact path="/recipes" element={<CardItems />} />
           <Route exact path="/favorites" element={<Favorites />} />
-          <Route path="/login" element={isLoggedIn ? <Dashboard /> : <LogIn logFunction={loginUser} />} />
-          <Route exact path="/signup" element={<SignUp />} />
+          <Route path="/login" element={isLoggedIn ? <AfterLogin /> : <LogIn logFunction={loginUser} />} />
+          <Route exact path="/signup" element={isLoggedIn ? <AfterLogin /> : <SignUp logFunction={loginUser} />} />
           <Route exact path="/avocado-toast" element={<AvocadoToast />} />
         </Routes>
         <Footer />

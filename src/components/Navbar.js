@@ -20,7 +20,9 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <Link to="/recipes" className="nav-links">Recipes</Link>
+            <Link to="/recipes" className="nav-links">
+              Recipes
+            </Link>
           </li>
           <li>
             <Link to="/favorites" className="nav-links">

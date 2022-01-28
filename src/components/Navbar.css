@@ -3,6 +3,18 @@
   --back-color: #f9fbf0
 } */
 
+/* CSS reset */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border:0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
 .navbar-container {
   background: #f9fbf0;
   height: 80px;
@@ -58,3 +70,17 @@
   background: #23833a;
   color: #f9fbf0;
 }
+
+/* @media only screen and (max-width: 599px) {
+.navbar-container {
+  background: #3308a7;
+  height: 250px;
+}
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1050px) {
+  .navbar-container {
+  background: #428daf;
+  height: 250px;
+  }
+} */

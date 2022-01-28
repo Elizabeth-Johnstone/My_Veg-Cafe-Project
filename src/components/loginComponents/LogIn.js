@@ -1,8 +1,8 @@
 import React from "react";
 import { useFormik } from "formik";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 import "./Login.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Login(props) {
   let navigate = useNavigate();
@@ -15,6 +15,7 @@ export default function Login(props) {
     axios
       .post("http://localhost:4000/login", values)
       .then((res) => {
+        console.log(res.data.username)
         // console.log(res.data);
         localStorage.setItem("ID", res.data.id);
         localStorage.setItem("First name", res.data.firstname);
@@ -22,22 +23,22 @@ export default function Login(props) {
         localStorage.setItem("Username", res.data.username);
         localStorage.setItem("E-mail", res.data.email);
         props.logFunction();
-        navigate('/secret')
+        navigate('/login')
+
       })
       .catch((err) => {
-        console.log(err.response.data);
+        alert(err.response.data);
       });
   };
   const validate = (values) => {
     const errors = {};
     if (!values.username) {
-      errors.username = "Username Required";
+      errors.username = "*Username Required";
     }
     if (!values.password) {
-      errors.password = "Password Required";
-    } else if (values.password.length < 8) {
-      errors.password = "Password must be longer than 8 Characters.";
+      errors.password = "*Password Required";
     }
+    return errors;
   };
 
   const formik = useFormik({
@@ -49,7 +50,7 @@ export default function Login(props) {
   return (
     <div id="form-body">
       <div className="form-container">
-        <h1 className="title">Log in</h1>
+        <h1 className="title-log-in">Log in</h1>
         <form className="form" onSubmit={formik.handleSubmit}>
           <div className="input-container">
             <div className="input-box">
@@ -83,7 +84,16 @@ export default function Login(props) {
             />
           </div>
         </form>
+        <div className="errors-log-in">
+          {formik.errors.username ? <div>{formik.errors.username}</div> : null}
+          {formik.errors.password ? <div>{formik.errors.password}</div> : null}
+        </div>
       </div>
     </div>
   );
 }
+
+
+// module.exports = {
+//   username = username
+// }
