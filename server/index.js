@@ -14,7 +14,7 @@ app.use(cors());
 
 app.get("/recipes", async (req, res) => {
   const validUsers = await sequelize
-    .query(`SELECT * FROM users`)
+    .query(`SELECT * FROM recipes`)
     .catch((error) => console.log(error));
   res.status(200).send(validUsers);
 });
@@ -40,7 +40,7 @@ app.post("/signup", async (req, res) => {
             )
         `);
     const userInfo = await sequelize.query(`
-            SELECT id, firstName, lastName, username, email
+            SELECT user_id, firstName, lastName, username, email
             FROM users
             WHERE username = '${username}'
         `);
@@ -62,7 +62,7 @@ app.post("/login", async (req, res) => {
   if (validUser[1].rowCount === 1) {
     if (bcrypt.compareSync(password, validUser[0][0].password)) {
       let object = {
-        id: validUser[0][0].id,
+        id: validUser[0][0].user_id,
         firstname: validUser[0][0].firstname,
         lastname: validUser[0][0].lastname,
         username,

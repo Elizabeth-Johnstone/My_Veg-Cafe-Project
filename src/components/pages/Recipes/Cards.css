@@ -1,8 +1,13 @@
 #cards-body {
   height: 100%;
-  display: flex;
-  justify-content: center;
- 
+  padding: 4rem;
+  background: #fff;
+  color: #23833a
+}
+
+.cards-title {
+  text-align: center;
+  font-size: 18pt;
 }
 
 .search-recipes {
@@ -19,50 +24,42 @@
   border-bottom-width: 2px;
 }
 
-.cards {
-    padding: 4rem;
-    background: #fff;
-    color: #23833a
+.cards-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cards__wrapper {
+    width: 350px;
+    display: inline-block;
   }
-  
-  .cards-title {
-    text-align: center;
-    font-size: 18pt;
-  }
-  
-  .cards__container {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-  }
-  
-  .cards__items {
-    display: flex;
-    margin: 50px 0 45px;
-  }
-  
-  .cards__item {
+
+.cards__item {
     display: flex;
     flex: 1;
     margin: 0 1rem;
     margin-bottom: 2rem;
     background: #f9fbf0;
-  }
-  
-  .cards__item__link {
+    overflow: hidden;
+    border-radius: 8px;
+    height: 290px
+}
+
+.cards__item__link {
     width: 100%;
     box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
-    border-radius: 10px;
+    border-radius: 8px;
     overflow: hidden;
     text-decoration: none;
   }
-  
+
   .cards__item__pic {
     position: relative;
     padding-top: 67%;
     overflow: hidden;
+    margin-top: 0px;
   }
-  
+
   .cards__item__img {
     position: absolute;
     top: 0;
@@ -76,22 +73,49 @@
     max-height: 100%;
     object-fit: cover;
     transition: all 0.2s linear;
+    border-radius: 28px;
+    overflow:hidden;
   }
-  
+
   .cards__item__img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
-  
-  .cards__item__info {
-    padding: 20px 30px 30px;
-  }
-  
+
   .cards__item__text {
     color: #0e5327;
     font-size: 18px;
     line-height: 24px;
   }
   
-  .content__blog__container {
-    width: 84%;
+  #like-btn {
+    color: #f384a7;
+    padding-top: 10px;
+    font-size: 1.7em;
   }
+
+  #like-btn:hover {
+    color: #f94e85;
+  }
+
+  #like-btn:active {
+    color: #0e5327;
+  }
+
+  
+  /* @media only screen and (min-width: 1200px) {
+    .content__blog__container {
+      width: 84%;
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    .cards__items {
+      display: flex;
+    }
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    .cards__item {
+      margin-bottom: 2rem;
+    }
+  } */

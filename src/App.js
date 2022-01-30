@@ -4,19 +4,20 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer.js";
 import "./App.css";
 import WelcomeSection from "./components/landingComponents/WelcomeSection";
-import CardItems from "./components/pages/Recipes/CardItems";
 import Favorites from "./components/pages/Favorites";
 import LogIn from "./components/loginComponents/LogIn";
 import AfterLogin from "./components/loginComponents/AfterLogin";
 import SignUp from "./components/loginComponents/SignUp";
 import AvocadoToast from "./components/pages/Instructions/AvocadoToast";
+import CardSearch from "./components/pages/Recipes/CardSearch";
+
 
 function App() {
   const[isLoggedIn, setIsLoggedIn] = useState(false)
   const loginUser = () => setIsLoggedIn(!isLoggedIn)
 
   useEffect(() => {
-    if(localStorage.getItem('id')) {
+    if(localStorage.getItem('ID')) {
       setIsLoggedIn(true)
     }
   }, [])
@@ -27,10 +28,10 @@ function App() {
         <Navbar />
         <Routes>
           <Route exact path="*" element={<WelcomeSection />} />
-          <Route exact path="/recipes" element={<CardItems />} />
+          <Route exact path="/recipes" element={<CardSearch />} />
           <Route exact path="/favorites" element={<Favorites />} />
           <Route path="/login" element={isLoggedIn ? <AfterLogin /> : <LogIn logFunction={loginUser} />} />
-          <Route exact path="/signup" element={isLoggedIn ? <AfterLogin /> : <SignUp logFunction={loginUser} />} />
+          <Route path="/signup" element={isLoggedIn ? <AfterLogin /> : <SignUp logFunction={loginUser} />} />
           <Route exact path="/avocado-toast" element={<AvocadoToast />} />
         </Routes>
         <Footer />

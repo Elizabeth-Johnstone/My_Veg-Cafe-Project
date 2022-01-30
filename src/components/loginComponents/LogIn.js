@@ -15,16 +15,13 @@ export default function Login(props) {
     axios
       .post("http://localhost:4000/login", values)
       .then((res) => {
-        console.log(res.data.username)
-        // console.log(res.data);
         localStorage.setItem("ID", res.data.id);
         localStorage.setItem("First name", res.data.firstname);
         localStorage.setItem("Last name", res.data.lastname);
         localStorage.setItem("Username", res.data.username);
         localStorage.setItem("E-mail", res.data.email);
         props.logFunction();
-        navigate('/login')
-
+        navigate("/login");
       })
       .catch((err) => {
         alert(err.response.data);
@@ -92,7 +89,6 @@ export default function Login(props) {
     </div>
   );
 }
-
 
 // module.exports = {
 //   username = username

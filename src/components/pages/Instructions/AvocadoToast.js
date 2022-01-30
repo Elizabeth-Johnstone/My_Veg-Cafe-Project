@@ -1,5 +1,5 @@
 import React from "react";
-import "./Recipes.css";
+import "./Instructions.css";
 
 export default function AvocadoToast() {
   return (

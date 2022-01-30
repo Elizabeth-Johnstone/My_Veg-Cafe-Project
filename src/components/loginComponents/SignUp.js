@@ -2,8 +2,10 @@ import React from "react";
 import { useFormik } from "formik";
 import axios from "axios";
 import "./Login.css";
+import { useNavigate } from "react-router-dom";
 
-export default function SignUp() {
+export default function SignUp(props) {
+  let navigate = useNavigate();
   const initialValues = {
     firstName: "",
     lastName: "",
@@ -16,13 +18,15 @@ export default function SignUp() {
     axios
       .post("http://localhost:4000/signup", values)
       .then((res) => {
-        // console.log(res.data);
-        localStorage.setItem("ID", res.data[0][0].id);
+        localStorage.setItem("ID", res.data[0][0].user_id);
         localStorage.setItem("First name", res.data[0][0].firstname);
         localStorage.setItem("Last name", res.data[0][0].lastname);
         localStorage.setItem("Username", res.data[0][0].username);
         localStorage.setItem("E-mail", res.data[0][0].email);
         alert('Account successfully created')
+        props.logFunction();
+        navigate('/signup')
+
       })
       .catch((err) => alert(err.response.data));
   };
