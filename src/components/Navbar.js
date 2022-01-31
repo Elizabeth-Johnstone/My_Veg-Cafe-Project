@@ -2,10 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
-function Navbar() {
+function Navbar(props) {
   const divStyle = {
     color: "#23833a",
   };
+
+  const logOut = () => {
+    localStorage.clear()
+    props.changeStatus(false)
+  }
+  
   return (
     <>
       <nav className="navbar-container">
@@ -20,24 +26,32 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <Link to="/recipes" className="nav-links">
-              Recipes
-            </Link>
+            <Link to="/recipes" className="nav-links">Recipes</Link>
           </li>
           <li>
             <Link to="/favorites" className="nav-links">
               Favorites
             </Link>
-          </li>
+            </li>
+
+            {props.userStatus
+          ? 
+          <li>
+          <Link to="/login" className="nav-links" onClick={logOut}>
+          Log out
+        </Link>
+        </li>
+          :
           <li>
             <Link to="/login" className="nav-links">
               Log-in
             </Link>
           </li>
+          }
         </ul>
         <Link to="/signup">
           <button className="btn">SIGN UP</button>
-        </Link>
+        </Link> 
       </nav>
     </>
   );

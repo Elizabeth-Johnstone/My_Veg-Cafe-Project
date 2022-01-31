@@ -8,7 +8,7 @@ export default function AvocadoToast() {
         <h2 className="recipe-title">Open-Faced Avocado Melt</h2>
         <img
           className="recipe-img"
-          src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F37%2F2014%2F03%2F07%2Favocado-melts-arugula-RU223208.jpg&q=85"
+          src="images/avocado.jpg"
           alt="Avocado Melt"></img>
         <div className="ingredients-container">
           <h3>Ingredients</h3>

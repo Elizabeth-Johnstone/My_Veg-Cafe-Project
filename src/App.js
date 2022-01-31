@@ -25,7 +25,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar />
+        <Navbar userStatus = {isLoggedIn} changeStatus = {setIsLoggedIn}/>
         <Routes>
           <Route exact path="*" element={<WelcomeSection />} />
           <Route exact path="/recipes" element={<CardSearch />} />

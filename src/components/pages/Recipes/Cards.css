@@ -53,6 +53,10 @@
     text-decoration: none;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   .cards__item__pic {
     position: relative;
     padding-top: 67%;

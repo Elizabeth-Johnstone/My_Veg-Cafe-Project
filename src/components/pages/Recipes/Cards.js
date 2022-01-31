@@ -22,19 +22,20 @@ export default function Cards(props) {
         // navigate('/signup')
       }).catch(() => alert("Already added!"));
   };
-
+// add button localStorage.Clear()
   return (
     <div>
       <li className="cards__item">
-        <Link className="cards__item__link" to={props.path} id={props.id}>
-          <figure className="cards__item__pic">
+        <div className="cards__item__link" id={props.id}>
+        <Link  to={props.path}>
+          <div className="cards__item__pic">
             <img className="cards__item__img" alt={props.alt} src={props.src} />
-          </figure>
+          </div>
+
           <h5 className="cards__item__text">{props.text}</h5>
-          <Link to='/signup'>
-          <i className="fas fa-heart" id="like-btn" onClick={handleClick}></i>
           </Link>
-        </Link>
+          <i className="fas fa-heart" id="like-btn" onClick={handleClick}></i>
+          </div>
       </li>
     </div>
   );
