@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../../../App.css";
-import "./Cards.css";
-import Cards from "./Cards.js";
+import "./Recipes.css";
+import FavRecipes from "./FavRecipes.js";
 
 export default function CardSearch() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -39,7 +39,7 @@ export default function CardSearch() {
           .map((recipe) => (
                 <div key={recipe.recipe_id} 
                 className="cards__wrapper">
-                  <Cards
+                  <FavRecipes
                     id={recipe.recipe_id}
                     src={recipe.img_src}
                     text={recipe.name}
