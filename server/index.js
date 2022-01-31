@@ -12,10 +12,27 @@ app.use(cors());
 
 // Endpoints
 
+app.post("/add-favorite", async (req, res) => {
+  const { user_id, recipe_id } = req.body;
+  const checkFave = await sequelize.query(`
+  SELECT * FROM favorites WHERE user_id = '${user_id}' AND  recipe_id = '${recipe_id}'
+  `);
+  if (checkFave[1].rowCount !== 0) {
+    res.status(401).send();
+  } else {
+    await sequelize.query(
+      `
+INSERT INTO favorites (user_id, recipe_id) VALUES ('${user_id}', '${recipe_id}'  )
+`
+    );
+    const faveInfo = await sequelize.query(`
+SELECT name FROM recipes WHERE recipe_id = '${recipe_id}'`);
+    res.status(200).send(faveInfo);
+  }
+});
+
 app.get("/recipes", async (req, res) => {
-  const validUsers = await sequelize
-    .query(`SELECT * FROM recipes`)
-    .catch((error) => console.log(error));
+  const validUsers = await sequelize.query(`SELECT * FROM recipes`);
   res.status(200).send(validUsers);
 });
 
@@ -25,7 +42,7 @@ app.post("/signup", async (req, res) => {
     SELECT * FROM users WHERE username = '${username}'
     `);
   if (checkUser[1].rowCount !== 0) {
-    res.status(401).send("Username already exists");
+    res.status(401).send();
   } else {
     const salt = bcrypt.genSaltSync(10);
     const passwordHash = bcrypt.hashSync(password, salt);

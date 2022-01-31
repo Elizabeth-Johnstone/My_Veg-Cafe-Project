@@ -11,7 +11,6 @@ export default function CardSearch() {
     axios
       .get("http://localhost:4000/recipes")
       .then((res) => {
-        console.log(res.data[0]);
         setRecipes(res.data[0]);
       })
       .catch((err) => {
@@ -38,8 +37,10 @@ export default function CardSearch() {
             recipe.name.toLowerCase().includes(searchTerm.toLowerCase())
           )
           .map((recipe) => (
-                <div key={recipe.id} className="cards__wrapper">
+                <div key={recipe.recipe_id} 
+                className="cards__wrapper">
                   <Cards
+                    id={recipe.recipe_id}
                     src={recipe.img_src}
                     text={recipe.name}
                     path={recipe.url_path}

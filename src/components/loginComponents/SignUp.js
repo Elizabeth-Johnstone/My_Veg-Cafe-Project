@@ -23,12 +23,11 @@ export default function SignUp(props) {
         localStorage.setItem("Last name", res.data[0][0].lastname);
         localStorage.setItem("Username", res.data[0][0].username);
         localStorage.setItem("E-mail", res.data[0][0].email);
-        alert('Account successfully created')
+        alert("Account successfully created");
         props.logFunction();
-        navigate('/signup')
-
+        navigate("/signup");
       })
-      .catch((err) => alert(err.response.data));
+      .catch(() => alert("Account already exists!"));
   };
   const validate = (values) => {
     const errors = {};
@@ -43,14 +42,14 @@ export default function SignUp(props) {
     }
     if (!values.email) {
       errors.email = "*E-mail required";
-    } else if (!values.email.includes('@') || !values.email.includes('.')) {
-      errors.email = "*Please enter a valid email"
+    } else if (!values.email.includes("@") || !values.email.includes(".")) {
+      errors.email = "*Please enter a valid email";
     }
     if (!values.password) {
       errors.password = "*Password required";
     } else if (values.password.length < 8) {
       errors.password = "*Password must be longer than 8 characters";
-    } 
+    }
     if (!values.confirmPassword) {
       errors.confirmPassword = "*Please confirm password";
     } else if (values.password !== values.confirmPassword) {
@@ -154,12 +153,16 @@ export default function SignUp(props) {
           </div>
         </form>
         <div className="errors-sign-up">
-          {formik.errors.firstName ? (<div>{formik.errors.firstName}</div>) : null}
+          {formik.errors.firstName ? (
+            <div>{formik.errors.firstName}</div>
+          ) : null}
           {formik.errors.lastName ? <div>{formik.errors.lastName}</div> : null}
           {formik.errors.username ? <div>{formik.errors.username}</div> : null}
           {formik.errors.email ? <div>{formik.errors.email}</div> : null}
           {formik.errors.password ? <div>{formik.errors.password}</div> : null}
-          {formik.errors.confirmPassword ? (<div>{formik.errors.confirmPassword}</div>) : null}
+          {formik.errors.confirmPassword ? (
+            <div>{formik.errors.confirmPassword}</div>
+          ) : null}
         </div>
       </div>
     </div>
