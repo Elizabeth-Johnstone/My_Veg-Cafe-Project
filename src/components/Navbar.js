@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
-function Navbar(props) {
+export default function Navbar(props) {
   const divStyle = {
     color: "#23833a",
   };
@@ -57,5 +57,3 @@ function Navbar(props) {
     </>
   );
 }
-
-export default Navbar;

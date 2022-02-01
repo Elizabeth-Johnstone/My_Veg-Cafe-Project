@@ -3,64 +3,58 @@ import "./Instructions.css";
 import CardSearch from "../Recipes/SearchRecipes";
 
 export default function Couscous() {
-    CardSearch()
+  CardSearch();
   return (
     <div id="inst-body">
       <div className="inst-container">
         <h2 className="inst-title">Peanut Butter Cookies</h2>
         <div className="inst-img-container">
-        <img
-          className="inst-img"
-          src="images/cookies.jpg"
-          alt="Two Peanut Butter Cookies"></img>
-          </div>
+          <img
+            className="inst-img"
+            src="images/cookies.jpg"
+            alt="Two Peanut Butter Cookies"
+          ></img>
+        </div>
         <div className="inst-ingredients-container">
           <h3 className="inst-subtitle">Ingredients</h3>
-          <li className="ingredients">2 slices of sourdough bread</li>
-          <li className="ingredients">1 avocado</li>
-          <li className="ingredients">1 garlic clove (chopped into small pieces)</li>
-          <li className="ingredients">1/4 onion (chopped into small pieces)</li>
-          <li className="ingredients">Mustard (about a teaspoon)</li>
-          <li className="ingredients">Juice from 1 lime</li>
-          <li className="ingredients">Cheese (any type you want)</li>
-          <li className="ingredients">Spices (anything you want)</li>
-          <li className="ingredients">Olive oil</li>
-          <li className="ingredients">Cilantro</li>
+          <li className="ingredients">1/2 cup butter</li>
+          <li className="ingredients">1/2 cup peanut butter</li>
+          <li className="ingredients">1/2 cup sugar</li>
+          <li className="ingredients">1/2 cup brown sugar</li>
+          <li className="ingredients">1 egg</li>
+          <li className="ingredients">1 1/4 cups flour</li>
+          <li className="ingredients">1/2 teaspoon baking powder</li>
+          <li className="ingredients">1/4 teaspoon salt</li>
+          <li className="ingredients">3/4 teaspoons baking soda</li>
         </div>
         <div className="inst-steps-container">
           <h3 className="inst-subtitle">Steps</h3>
-          <p className="steps">1. Preheat oven to 350 degrees.</p>
-          <p className="steps">
-            2. Put the sourdough slices in a toaster just long enough so that
-            they start to get brown.
-          </p>
-          <p className="steps">
-            3. While the bread is in the toaster, cut the avocado in half, and
-            mash it in a bowl.
-          </p>
-          <p className="steps">
-            4. Now mix in the garlic, onion, mustard, some of the lime juice,
-            and the spices with the avocado. Some good spices/herbs to add
-            are pepper, paprika, red pepper flakes, and parsley. You can add pretty
-            much anything.
-          </p>
-          <p className="steps">
-            5. Lay the toasted sourdough on a plate and spread the guacamole you
-            have just made on it. If there is guacamole left over, squeeze the
-            rest of the lime over it and put it in the fridge. The lime juice
-            will stop the guacamole from turning brown.
-          </p>
-          <p className="steps">
-            6. Now lay your cheese (slices or grated) on top of the guacamole on
-            both of the sourdough slices, so that it’s completely covering the
-            guacamole.
-          </p>
-          <p className="steps">7. Place into the oven until the cheese is melted.</p>
-          <p className="steps">
-            8. When you take it out put some olive oil, salt, and some spices
-            and cilantro on top! Now all that’s left is to turn on a lo-fi chill
-            beats playlist to really set the hipster tone
-          </p>
+          <ol>
+            <li className="steps">
+              Mix butter, peanut butter, sugar, and brown sugar in a
+              medium/large mixing bowl
+            </li>
+            <li className="steps">Beat in eggs</li>
+            <li className="steps">
+              In another bowl, mix flour, baking powder, baking soda, and salt
+            </li>
+            <li className="steps">
+              Mix the contents of the second bowl into the first
+            </li>
+            <li className="steps">Refrigerate dough for an hour</li>
+            <li className="steps">
+              After an hour has passed, preheat oven to 375 degrees
+            </li>
+            <li className="steps">
+              Roll dough into 12 balls and place 1 inch apart on a baking pan
+            </li>
+            <li className="steps">
+              Use a fork to flatten each ball of dough, creating a crisscross
+              pattern{" "}
+            </li>
+            <li className="steps">Bake cookies for 10 minutes </li>
+            <li className="steps">Let cool and enjoy! </li>
+          </ol>
         </div>
       </div>
     </div>

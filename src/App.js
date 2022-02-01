@@ -15,9 +15,9 @@ import Quesadilla from "./components/pages/Instructions/Quesadilla";
 import Couscous from "./components/pages/Instructions/Couscous";
 import Cookies from "./components/pages/Instructions/Cookies";
 import SearchRecipes from "./components/pages/Recipes/SearchRecipes";
+import ScrollIntoView from "./ScrollIntoView";
 
-
-function App() {
+export default function App() {
   const[isLoggedIn, setIsLoggedIn] = useState(false)
   const loginUser = () => setIsLoggedIn(!isLoggedIn)
 
@@ -29,7 +29,8 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter >
+      <ScrollIntoView />
         <Navbar userStatus = {isLoggedIn} changeStatus = {setIsLoggedIn}/>
         <Routes>
           <Route exact path="*" element={<WelcomeSection />} />
@@ -49,5 +50,3 @@ function App() {
     </>
   );
 }
-
-export default App;

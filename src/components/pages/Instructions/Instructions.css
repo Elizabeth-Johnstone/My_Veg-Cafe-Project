@@ -20,16 +20,47 @@ font-size: 16pt;
 padding-bottom: 1%;
 }
 
-.inst-ingredients-container, .inst-steps-container {
+.inst-ingredients-container, .inst-steps-container, .inst-tools-container {
     padding-bottom: 30px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 13%;
+    padding-right: 13%;
 }
 
-.ingredients {
+ol > li {
+    margin-left: 15px;
+    padding-left: 5px;
+}
+
+.ingredients, .tools {
     padding-bottom: 1%;
 }
 
 .steps {
     padding-bottom: 2%;
+}
+
+@media screen and (max-width: 800px) {
+
+    .inst-img-container {
+        justify-content: left;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .inst-ingredients-container, .inst-steps-container, .inst-tools-container {
+        padding: 0;
+        padding-bottom: 20px;
+    }
+
+    .ingredients {
+    list-style-type: none;
+    }
+
+.inst-container {
+  background-color: #fff;
+  padding: 10px 15px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  background: #f9fbf0;
+  border-radius: 5px;
+}
 }

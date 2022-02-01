@@ -2,7 +2,7 @@ import React from 'react';
 import '../../App.css';
 import './WelcomeSection.css';
 
-function WelcomeSection() {
+export default function WelcomeSection() {
   return (
     <div className='welcome-container'>
       <h1 className="welcome-message">WELCOME</h1>
@@ -10,5 +10,3 @@ function WelcomeSection() {
     </div>
   );
 }
-
-export default WelcomeSection;

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
-function Footer() {
+export default function Footer() {
   return (
     <div className="foot-container">
       <div>
@@ -54,8 +54,14 @@ function Footer() {
           <i className="fab fa-linkedin" />
         </a>
       </div>
+      <a
+          className="foot-attribution"
+          href="https://fontawesome.com/license"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Icons by: Fonticons, Inc.
+        </a>
     </div>
   );
 }
-
-export default Footer;

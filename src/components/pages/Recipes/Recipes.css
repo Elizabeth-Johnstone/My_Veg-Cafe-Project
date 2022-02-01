@@ -82,7 +82,7 @@
   .recipes__item__text {
     color: #0e5327;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 24px;
     padding-top: 8px;
   }
@@ -103,21 +103,26 @@
     color: #0e5327;
   }
 
-  
-  /* @media only screen and (min-width: 1200px) {
-    .content__blog__container {
-      width: 84%;
+
+  @media screen and (max-width: 800px) {
+    #recipes-body {
+      padding: 1.5rem;
+    }
+    .recipes-search {
+
+      width: 90%;
+      margin-bottom: 30px;
+    }
+
+    .recipes__wrapper {
+      width: 300px;
+    }
+
+    .recipes__item__text {
+      color: #0e5327;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 24px;
+      padding-top: 8px;
     }
   }
-  
-  @media only screen and (min-width: 1024px) {
-    .cards__items {
-      display: flex;
-    }
-  }
-  
-  @media only screen and (max-width: 1024px) {
-    .cards__item {
-      margin-bottom: 2rem;
-    }
-  } */

@@ -3,64 +3,60 @@ import "./Instructions.css";
 import CardSearch from "../Recipes/SearchRecipes";
 
 export default function Omelette() {
-    CardSearch()
+  CardSearch();
   return (
     <div id="inst-body">
       <div className="inst-container">
         <h2 className="inst-title">Vegetable and Cheese Omelette</h2>
         <div className="inst-img-container">
-        <img
-          className="inst-img"
-          src="images/omelette.jpg"
-          alt="Omelette with Salad"></img>
-          </div>
+          <img
+            className="inst-img"
+            src="images/omelette.jpg"
+            alt="Omelette with Salad"
+          ></img>
+        </div>
         <div className="inst-ingredients-container">
           <h3 className="inst-subtitle">Ingredients</h3>
-          <li className="ingredients">2 slices of sourdough bread</li>
-          <li className="ingredients">1 avocado</li>
-          <li className="ingredients">1 garlic clove (chopped into small pieces)</li>
+          <li className="ingredients">One egg</li>
+          <li className="ingredients">A splash of milk</li>
+          <li className="ingredients">Butter</li>
+          <li className="ingredients">Shredded cheese</li>
           <li className="ingredients">1/4 onion (chopped into small pieces)</li>
-          <li className="ingredients">Mustard (about a teaspoon)</li>
-          <li className="ingredients">Juice from 1 lime</li>
-          <li className="ingredients">Cheese (any type you want)</li>
-          <li className="ingredients">Spices (anything you want)</li>
-          <li className="ingredients">Olive oil</li>
-          <li className="ingredients">Cilantro</li>
+          <li className="ingredients">
+            1/4 red pepper (chopped into small pieces)
+          </li>
+          <li className="ingredients">Garlic (one clove, minced)</li>
+          <li className="ingredients">About a tablespoon of frozen corn</li>
+          <li className="ingredients">A few small pieces of tempeh</li>
+          <li className="ingredients">
+            Salt, pepper, paprika, sesame seeds, other spices/seasoning you want
+          </li>
         </div>
         <div className="inst-steps-container">
           <h3 className="inst-subtitle">Steps</h3>
-          <p className="steps">1. Preheat oven to 350 degrees.</p>
-          <p className="steps">
-            2. Put the sourdough slices in a toaster just long enough so that
-            they start to get brown.
-          </p>
-          <p className="steps">
-            3. While the bread is in the toaster, cut the avocado in half, and
-            mash it in a bowl.
-          </p>
-          <p className="steps">
-            4. Now mix in the garlic, onion, mustard, some of the lime juice,
-            and the spices with the avocado. Some good spices/herbs to add
-            are pepper, paprika, red pepper flakes, and parsley. You can add pretty
-            much anything.
-          </p>
-          <p className="steps">
-            5. Lay the toasted sourdough on a plate and spread the guacamole you
-            have just made on it. If there is guacamole left over, squeeze the
-            rest of the lime over it and put it in the fridge. The lime juice
-            will stop the guacamole from turning brown.
-          </p>
-          <p className="steps">
-            6. Now lay your cheese (slices or grated) on top of the guacamole on
-            both of the sourdough slices, so that it’s completely covering the
-            guacamole.
-          </p>
-          <p className="steps">7. Place into the oven until the cheese is melted.</p>
-          <p className="steps">
-            8. When you take it out put some olive oil, salt, and some spices
-            and cilantro on top! Now all that’s left is to turn on a lo-fi chill
-            beats playlist to really set the hipster tone
-          </p>
+          <ol>
+          <li className="steps">
+            Add red pepper, onion, garlic, tempeh, and corn to a frying pan
+            and cook on low heat for about 5 minutes
+          </li>
+          <li className="steps">
+            Crack the egg into a bowl, add the milk, and whisk with a fork
+          </li>
+          <li className="steps">
+            Mix salt, pepper, paprika, sesame seeds, and any other desired
+            spices in the bowl
+          </li>
+          <li className="steps">
+            Lightly butter a pan on medium heat and pour in the contents of
+            the bowl
+          </li>
+          <li className="steps">
+            Sprinkle the shredded cheese and cooked vegetables on top
+          </li>
+          <li className="steps">
+            Be sure to cook your omelette on both sides and enjoy!
+          </li>
+          </ol>
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@ import "../../../App.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-export default function Cards(props) {
+export default function FavRecipes(props) {
   const handleClick = () => {
 
     // Below finds ID of user
