@@ -1,45 +1,32 @@
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
-.home,
-.services,
-.products,
-.sign-up {
+#login-form-body, #inst-body {
+  height: 100%;
   display: flex;
-  height: 90vh;
+  justify-content: center;
+  margin-top: 7%;
+  margin-bottom: 8%;
+}
+
+.inst-container, .login-form-container {
+  background-color: #fff;
+  padding: 25px 30px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  background: #f9fbf0;
+  border-radius: 5px;
+}
+
+.login-title, .inst-title, .recipes-title, .faves-title {
+  font-size: 25px;
+  font-weight: 600;
+  color: #23833a; 
+  width: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
-}
-
-.services {
-  /* background-image: url('/images/img-2.jpg'); */
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
-}
-
-.products {
-  /* background-image: url('/images/img-1.jpg'); */
-  background-position: center;
-  background-size: fill;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
-}
-
-.sign-up {
-  /* background-image: url('/images/img-8.jpg'); */
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
 }

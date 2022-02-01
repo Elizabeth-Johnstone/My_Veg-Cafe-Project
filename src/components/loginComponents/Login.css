@@ -1,60 +1,29 @@
-/* * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  border:0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-} */
-
-#form-body {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 7%;
-  margin-bottom: 8%;
-}
-
-.form-container {
+.login-form-container {
   max-width: 700px;
-  background-color: #fff;
-  padding: 25px 30px;
-  border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
-  background: #f9fbf0;
 }
 
-.title-log-in {
-  font-size: 25px;
-  /* margin: 100%; */
-  color: #23833a; 
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.form .input-container{
+
+.login-form .login-input-container{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 20px 0 12px 0;
 }
 
-.input-box{
+.login-input-box{
   margin-bottom: 15px;
   width: calc(100% / 2 - 20px);
 }
 
-.input-box span.details{
+.login-input-box span.login-details{
   display: block;
   margin-bottom: 5px;
   color: #0e5327; 
 
 }
 
-.input-text {
+.login-input-text {
   height: 45px;
   width: 100%;
   font-size: 16px;
@@ -65,17 +34,17 @@
   transition: all 0.3s ease;
 }
 
-.form {
+.login-form {
   display: flex;
   flex-flow: column;
   align-items: center;
 }
 
-.form .button{
+.login-form .login-button{
    margin: 35px 0
  }
 
-.button .input-text {
+.login-button .login-input-text {
    width: 200px;
    border-radius: 5px;
    border: none;
@@ -87,12 +56,12 @@
    background-color: #23833a;
   }
  
-.button:hover{
+.login-button:hover{
   opacity: .9;
   transition: all 0.2s ease-out;
   }
 
-  .errors-sign-up, .errors-log-in {
+  .login-errors, .signup-errors {
     color: rgb(77, 12, 12);
     text-align: center;
   }
@@ -101,7 +70,7 @@
   width: 500px;
 }
 
-img {
+.login-img {
     display: flex;
     width: 100%;
     padding: 25px;

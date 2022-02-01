@@ -45,43 +45,43 @@ export default function Login(props) {
   });
 
   return (
-    <div id="form-body">
-      <div className="form-container">
-        <h1 className="title-log-in">Log in</h1>
-        <form className="form" onSubmit={formik.handleSubmit}>
-          <div className="input-container">
-            <div className="input-box">
-              <span className="details">Username</span>
+    <div id="login-form-body">
+      <div className="login-form-container">
+        <h1 className="login-title">Log in</h1>
+        <form className="login-form" onSubmit={formik.handleSubmit}>
+          <div className="login-input-container">
+            <div className="login-input-box">
+              <span className="login-details">Username</span>
               <input
-                className="input-text"
+                className="login-input-text"
                 type="text"
                 name="username"
                 onChange={formik.handleChange}
                 value={formik.values.username}
-                placeholder="Enter your username"
+                placeholder="Enter username"
               />
             </div>
-            <div className="input-box">
-              <span className="details">Password</span>
+            <div className="login-input-box">
+              <span className="login-details">Password</span>
               <input
-                className="input-text"
+                className="login-input-text"
                 type="password"
                 name="password"
                 onChange={formik.handleChange}
                 value={formik.values.password}
-                placeholder="Enter your password"
+                placeholder="Enter password"
               />
             </div>
           </div>
-          <div className="button">
+          <div className="login-button">
             <input
-              className="input-text"
+              className="login-input-text"
               type="submit"
               disabled={!formik.isValid}
             />
           </div>
         </form>
-        <div className="errors-log-in">
+        <div className="login-errors">
           {formik.errors.username ? <div>{formik.errors.username}</div> : null}
           {formik.errors.password ? <div>{formik.errors.password}</div> : null}
         </div>
@@ -89,7 +89,3 @@ export default function Login(props) {
     </div>
   );
 }
-
-// module.exports = {
-//   username = username
-// }

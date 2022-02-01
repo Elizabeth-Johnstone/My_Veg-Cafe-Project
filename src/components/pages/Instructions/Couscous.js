@@ -1,16 +1,18 @@
 import React from "react";
 import "./Instructions.css";
+import CardSearch from "../Recipes/SearchRecipes";
 
-export default function AvocadoToast() {
+export default function Couscous() {
+    CardSearch()
   return (
     <div id="inst-body">
       <div className="inst-container">
-        <h2 className="inst-title">Open-Faced Avocado Melt</h2>
+        <h2 className="inst-title">Couscous Health Bowl</h2>
         <div className="inst-img-container">
         <img
           className="inst-img"
-          src="images/avocado.jpg"
-          alt="Avocado Toast with Cheese"></img>
+          src="images/couscous.jpg"
+          alt="Bowl with Vegetables and Couscous"></img>
           </div>
         <div className="inst-ingredients-container">
           <h3 className="inst-subtitle">Ingredients</h3>

@@ -14,8 +14,8 @@ function Navbar(props) {
   
   return (
     <>
-      <nav className="navbar-container">
-        <Link to="/" className="logo" style={divStyle}>
+      <nav className="nav-container">
+        <Link to="/" className="nav-logo" style={divStyle}>
           My Veg Café
           <i className="fas fa-seedling" />
         </Link>
@@ -33,7 +33,8 @@ function Navbar(props) {
               Favorites
             </Link>
             </li>
-
+            
+{/* Toggles log in/out button and allows users to log out */}
             {props.userStatus
           ? 
           <li>
@@ -50,7 +51,7 @@ function Navbar(props) {
           }
         </ul>
         <Link to="/signup">
-          <button className="btn">SIGN UP</button>
+          <button className="nav-btn">SIGN UP</button>
         </Link> 
       </nav>
     </>

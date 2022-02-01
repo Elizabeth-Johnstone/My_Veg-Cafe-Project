@@ -1,40 +1,35 @@
-#cards-body {
+#recipes-body {
   height: 100%;
   padding: 4rem;
   background: #fff;
   color: #23833a
 }
 
-.cards-title {
-  text-align: center;
-  font-size: 18pt;
-}
-
-.search-recipes {
+.recipes-search {
   margin: auto;
   margin-top: 40px;
   display: flex;
   color: #0e5327; 
   height: 45px;
   width: 40%;
-  font-size: 16px;
+  font-size: 18px;
   border-radius: 5px;
   padding-left: 15px;
   border: 1px solid #ccc;
   border-bottom-width: 2px;
 }
 
-.cards-container {
+.recipes-container {
   text-align: center;
   margin-top: 20px;
 }
 
-.cards__wrapper {
+.recipes__wrapper {
     width: 350px;
     display: inline-block;
   }
 
-.cards__item {
+.recipes__item {
     display: flex;
     flex: 1;
     margin: 0 1rem;
@@ -45,7 +40,7 @@
     height: 290px
 }
 
-.cards__item__link {
+.recipes__item__link {
     width: 100%;
     box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
     border-radius: 8px;
@@ -53,18 +48,18 @@
     text-decoration: none;
   }
 
-  a {
+  .recipes-link {
     text-decoration: none;
   }
 
-  .cards__item__pic {
+  .recipes__item__pic {
     position: relative;
     padding-top: 67%;
     overflow: hidden;
     margin-top: 0px;
   }
 
-  .cards__item__img {
+  .recipes__item__img {
     position: absolute;
     top: 0;
     right: 0;
@@ -77,31 +72,34 @@
     max-height: 100%;
     object-fit: cover;
     transition: all 0.2s linear;
-    border-radius: 28px;
     overflow:hidden;
   }
 
-  .cards__item__img:hover {
+  .recipes__item__img:hover {
     transform: scale(1.05);
   }
 
-  .cards__item__text {
+  .recipes__item__text {
     color: #0e5327;
     font-size: 18px;
+    font-weight: 600;
     line-height: 24px;
+    padding-top: 8px;
   }
   
-  #like-btn {
+  #recipes-like-btn {
     color: #f384a7;
-    padding-top: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     font-size: 1.7em;
   }
 
-  #like-btn:hover {
+  #recipes-like-btn:hover {
     color: #f94e85;
+    cursor: pointer;
   }
 
-  #like-btn:active {
+  #recipes-like-btn:active {
     color: #0e5327;
   }
 

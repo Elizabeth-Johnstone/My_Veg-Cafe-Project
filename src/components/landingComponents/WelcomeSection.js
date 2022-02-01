@@ -5,8 +5,8 @@ import './WelcomeSection.css';
 function WelcomeSection() {
   return (
     <div className='welcome-container'>
-      <h1>WELCOME</h1>
-      <p>What would you like to make today?</p>
+      <h1 className="welcome-message">WELCOME</h1>
+      <p className="welcome-text">What would you like to make today?</p>
     </div>
   );
 }

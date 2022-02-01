@@ -1,37 +1,52 @@
-/* :root {
-  --text-color: #23833a;
-  --back-color: #f9fbf0
-} */
-
-/* CSS reset */
-
-/* * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  border:0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-} */
-
-.navbar-container {
+.nav-container, .foot-container {
   background: #f9fbf0;
-  height: 80px;
   display: flex;
+  align-items: center;
+  font-weight: 900;
+  z-index: 10;
   font-size: 1.2rem;
+  justify-content: center;
+}
+
+.nav-container {
+  height: 80px;
   position: sticky;
   top: 0;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-
 }
 
-.logo {
-  margin-left: 20px;
+.foot-container {
+  padding: 2rem 0 2rem 0;
+  flex-direction: column;
+}
+
+
+.nav-logo, .foot-logo {
   margin-top: 13px;
+  color: #23833a;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
 }
+
+.nav-logo {
+  margin-left: 20px;
+}
+
+
+.foot-socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 240px;
+}
+
+.foot-icon {
+  color: #23833a;
+  font-size: 24px;
+}
+
 
 .nav-menu {
   display: grid;
@@ -52,11 +67,11 @@
 }
 
 .nav-links:hover {
-  border-bottom: 4px solid #23833a;
+  border-bottom: 4px solid #f384a7;
   transition: all 0.2s ease-out;
 }
 
-.btn {
+.nav-btn {
   border-radius: 2px;
   background-color: transparent;
   color: #23833a;
@@ -64,11 +79,15 @@
   border: 1px solid #23833a;
   transition: all 0.3s ease-out;
   font-size: 18px;
+  font-weight: 900;
 }
 
-.btn:hover {
-  background: #23833a;
+.nav-btn:hover {
+  background: #f384a7;
   color: #f9fbf0;
+  border: 1px solid #f9fbf0;
+  border-radius: 2px;
+
 }
 
 /* @media only screen and (max-width: 599px) {

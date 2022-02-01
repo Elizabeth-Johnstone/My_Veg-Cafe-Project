@@ -5,13 +5,13 @@ export default function Secret() {
   var userFirstName = localStorage.getItem("First name");
 
   return (
-    <div id="form-body">
-      <div className="form-container">
-        <h1 className="title-log-in">
+    <div id="login-form-body">
+      <div className="login-form-container">
+        <h1 className="login-title">
           We're happy to see you, {userFirstName}!
         </h1>
-        <div className="img-container">
-          <img className="tea-img" src="/images/tea.jpg" alt="tea"></img>
+        <div className="login-img-container">
+          <img className="login-img" src="/images/tea.jpg" alt="tea"></img>
         </div>
       </div>
     </div>

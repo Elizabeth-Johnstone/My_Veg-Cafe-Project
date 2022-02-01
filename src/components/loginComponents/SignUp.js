@@ -65,15 +65,15 @@ export default function SignUp(props) {
   });
 
   return (
-    <div id="form-body">
-      <div className="form-container">
-        <h1 className="title-log-in">Create an account with us</h1>
-        <form className="form" onSubmit={formik.handleSubmit}>
-          <div className="input-container">
-            <div className="input-box">
-              <span className="details">First Name</span>
+    <div id="login-form-body">
+      <div className="login-form-container">
+        <h1 className="login-title">Create an account with us</h1>
+        <form className="login-form" onSubmit={formik.handleSubmit}>
+          <div className="login-input-container">
+            <div className="login-input-box">
+              <span className="login-details">First Name</span>
               <input
-                className="input-text"
+                className="login-input-text"
                 type="text"
                 name="firstName"
                 onChange={formik.handleChange}
@@ -82,10 +82,10 @@ export default function SignUp(props) {
                 required
               />
             </div>
-            <div className="input-box">
-              <span className="details">Last Name</span>
+            <div className="login-input-box">
+              <span className="login-details">Last Name</span>
               <input
-                className="input-text"
+                className="login-input-text"
                 type="text"
                 name="lastName"
                 onChange={formik.handleChange}
@@ -94,10 +94,10 @@ export default function SignUp(props) {
                 required
               />
             </div>
-            <div className="input-box">
-              <span className="details">Username</span>
+            <div className="login-input-box">
+              <span className="login-details">Username</span>
               <input
-                className="input-text"
+                className="login-input-text"
                 type="text"
                 name="username"
                 onChange={formik.handleChange}
@@ -106,10 +106,10 @@ export default function SignUp(props) {
                 required
               />
             </div>
-            <div className="input-box">
-              <span className="details">E-mail</span>
+            <div className="login-input-box">
+              <span className="login-details">E-mail</span>
               <input
-                className="input-text"
+                className="login-input-text"
                 type="text"
                 name="email"
                 onChange={formik.handleChange}
@@ -118,10 +118,10 @@ export default function SignUp(props) {
                 required
               />
             </div>
-            <div className="input-box">
-              <span className="details">Password</span>
+            <div className="login-input-box">
+              <span className="login-details">Password</span>
               <input
-                className="input-text"
+                className="login-input-text"
                 type="password"
                 name="password"
                 onChange={formik.handleChange}
@@ -130,10 +130,10 @@ export default function SignUp(props) {
                 required
               />
             </div>
-            <div className="input-box">
-              <span className="details">Confirm Password</span>
+            <div className="login-input-box">
+              <span className="login-details">Confirm Password</span>
               <input
-                className="input-text"
+                className="login-input-text"
                 type="password"
                 name="confirmPassword"
                 onChange={formik.handleChange}
@@ -143,16 +143,16 @@ export default function SignUp(props) {
               />
             </div>
           </div>
-          <div className="button">
+          <div className="login-button">
             <input
-              className="input-text"
+              className="login-input-text"
               type="submit"
               value="Register"
               disabled={!formik.isValid}
             />
           </div>
         </form>
-        <div className="errors-sign-up">
+        <div className="signup-errors">
           {formik.errors.firstName ? (
             <div>{formik.errors.firstName}</div>
           ) : null}

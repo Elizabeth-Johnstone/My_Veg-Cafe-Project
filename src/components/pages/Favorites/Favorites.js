@@ -23,14 +23,14 @@ export default function Favorites() {
         console.log(err);
       });
   }, []);
-  
+
   return (
-    <div id="cards-body">
-      <h1 className="cards-title">Favorites</h1>
-      <div className="cards-container">
+    <div id="recipes-body">
+      <h1 className="recipes-title">My Favorites List</h1>
+      <div className="recipes-container">
         {
         favorites.map((recipe) => (
-          <div key={recipe.recipe_id} className="cards__wrapper">
+          <div key={recipe.recipe_id} className="recipes__wrapper">
             <FavRecipes
               id={recipe.recipe_id}
               src={recipe.img_src}

@@ -19,11 +19,11 @@ export default function CardSearch() {
   }, []);
 
   return (
-    <div id='cards-body'>
-    <h1 className="cards-title">What would you like to make today?</h1>
-    <div className="search-container">
+    <div id='recipes-body'>
+    <h1 className="recipes-title">What would you like to make today?</h1>
+    <div className="recipes-search-container">
       <input
-        className="search-recipes"
+        className="recipes-search"
         type="text"
         placeholder="Search for a recipe..."
         onChange={(event) => {
@@ -31,14 +31,14 @@ export default function CardSearch() {
         }}
       />
     </div>
-      <div className="cards-container">
+      <div className="recipes-container">
         {recipes
           .filter((recipe) =>
             recipe.name.toLowerCase().includes(searchTerm.toLowerCase())
           )
           .map((recipe) => (
                 <div key={recipe.recipe_id} 
-                className="cards__wrapper">
+                className="recipes__wrapper">
                   <FavRecipes
                     id={recipe.recipe_id}
                     src={recipe.img_src}

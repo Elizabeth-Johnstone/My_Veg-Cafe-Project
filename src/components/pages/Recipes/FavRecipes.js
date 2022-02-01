@@ -22,18 +22,18 @@ export default function Cards(props) {
         alert('Removed recipe from favorites list')
       })
   };
-  
+
   return (
     <div>
-      <li className="cards__item">
-        <div className="cards__item__link" id={props.id}>
-        <Link  to={props.path}>
-          <div className="cards__item__pic">
-            <img className="cards__item__img" alt={props.alt} src={props.src} />
+      <li className="recipes__item">
+        <div className="recipes__item__link" id={props.id}>
+        <Link className="recipes-link"  to={props.path}>
+          <div className="recipes__item__pic">
+            <img className="recipes__item__img" alt={props.alt} src={props.src} />
           </div>
-          <h5 className="cards__item__text">{props.text}</h5>
+          <h5 className="recipes__item__text">{props.text}</h5>
           </Link>
-          <i className="fas fa-heart" id="like-btn" onClick={handleClick}></i>
+          <i className="fas fa-heart" id="recipes-like-btn" onClick={handleClick}></i>
           </div>
       </li>
     </div>
