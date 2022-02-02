@@ -83,7 +83,7 @@ app.post("/signup", async (req, res) => {
 });
 
 // Allows users to log in and notifies users if password or username is incorrect
-app.post("api/login", async (req, res) => {
+app.post("/api/login", async (req, res) => {
   const { username, password } = req.body;
   const validUser = await sequelize
     .query(

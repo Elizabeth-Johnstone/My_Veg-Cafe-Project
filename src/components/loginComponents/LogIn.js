@@ -15,7 +15,7 @@ export default function Login(props) {
 
   const onSubmit = (values) => {
     axios
-      .post(`${baseURL}/login`, values)
+      .post(`${baseURL}/api/login`, values)
       .then((res) => {
         localStorage.setItem("ID", res.data.id);
         localStorage.setItem("First name", res.data.firstname);
