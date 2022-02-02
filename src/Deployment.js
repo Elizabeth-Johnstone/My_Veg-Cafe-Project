@@ -4,3 +4,6 @@ Assign baseURL to window.location.origin for Heroku deployment. Assign it to `ht
 
 export const baseURL = window.location.origin
 // export const baseURL = `http://localhost:4000`;
+
+
+// https://my-veg-cafe-project.herokuapp.com
