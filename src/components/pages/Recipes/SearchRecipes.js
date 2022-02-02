@@ -5,11 +5,13 @@ import "./Recipes.css";
 import FavRecipes from "./FavRecipes.js";
 // import { baseURL } from "../../../Deployment.js";
 
-export const baseURL = window.location.origin
 
 export default function CardSearch() {
   const [searchTerm, setSearchTerm] = useState("");
   const [recipes, setRecipes] = useState([]);
+  
+const baseURL = window.location.origin
+
   useEffect(() => {
     axios
       .get(`${baseURL}/api/recipes`)
