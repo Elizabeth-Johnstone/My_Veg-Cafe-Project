@@ -3,18 +3,17 @@ import axios from "axios";
 import "../../../App.css";
 import "./Recipes.css";
 import FavRecipes from "./FavRecipes.js";
-// import { baseURL } from "../../../Deployment.js";
+import { baseURL } from "../../../Deployment.js";
 
 
 export default function CardSearch() {
   const [searchTerm, setSearchTerm] = useState("");
   const [recipes, setRecipes] = useState([]);
   
-// const baseURL = window.location.origin
 
   useEffect(() => {
     axios
-      .get(`https://my-veg-cafe-project.herokuapp.com/recipes`)
+      .get(`${baseURL}/recipes`)
       .then((res) => {
         setRecipes(res.data[0]);
       })
