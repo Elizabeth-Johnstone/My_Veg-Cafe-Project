@@ -14,7 +14,7 @@ export default function CardSearch() {
 
   useEffect(() => {
     axios
-      .get(`https://my-veg-cafe-project.herokuapp.com/api/recipes`)
+      .get(`https://my-veg-cafe-project.herokuapp.com/recipes`)
       .then((res) => {
         setRecipes(res.data[0]);
       })

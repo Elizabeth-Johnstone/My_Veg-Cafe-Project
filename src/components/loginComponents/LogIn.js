@@ -11,12 +11,12 @@ export default function Login(props) {
     username: "",
     password: "",
   };
-  
-// const baseURL = window.location.origin
+
+  // const baseURL = window.location.origin
 
   const onSubmit = (values) => {
     axios
-      .post(`https://my-veg-cafe-project.herokuapp.com/api/login`, values)
+      .post(`https://my-veg-cafe-project.herokuapp.com/login`, values)
       .then((res) => {
         localStorage.setItem("ID", res.data.id);
         localStorage.setItem("First name", res.data.firstname);
