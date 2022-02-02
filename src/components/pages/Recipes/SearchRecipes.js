@@ -10,7 +10,7 @@ export default function CardSearch() {
   const [searchTerm, setSearchTerm] = useState("");
   const [recipes, setRecipes] = useState([]);
   
-const baseURL = window.location.origin
+// const baseURL = window.location.origin
 
   useEffect(() => {
     axios
