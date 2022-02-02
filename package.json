@@ -1,6 +1,7 @@
 {
   "name": "capstone-project",
   "version": "0.1.0",
+  "main": "server/index.js",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
