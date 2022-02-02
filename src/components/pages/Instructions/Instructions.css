@@ -10,9 +10,9 @@
 
 .inst-img {
     width: 40%;
-    border-radius: 8px;
-    padding-top: 2%;
-    padding-bottom: 3%;
+    border-radius: 4px;
+    margin-top: 2%;
+    margin-bottom: 3%;
 }
 
 .inst-subtitle {

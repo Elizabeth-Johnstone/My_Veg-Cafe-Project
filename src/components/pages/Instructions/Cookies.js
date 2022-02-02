@@ -16,7 +16,7 @@ export default function Couscous() {
           ></img>
         </div>
         <div className="inst-ingredients-container">
-          <h3 className="inst-subtitle">Ingredients</h3>
+          <h3 className="inst-subtitle">Ingredients - for 12 cookies</h3>
           <li className="ingredients">1/2 cup butter</li>
           <li className="ingredients">1/2 cup peanut butter</li>
           <li className="ingredients">1/2 cup sugar</li>

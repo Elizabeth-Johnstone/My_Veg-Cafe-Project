@@ -12,6 +12,9 @@
   margin-top: 9%;
   margin-bottom: 9%;
 }
+#inst-body {
+  margin-top: 4%;
+}
 
 .inst-container, .login-form-container {
   background-color: #fff;
