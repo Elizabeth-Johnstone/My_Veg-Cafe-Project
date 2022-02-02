@@ -13,13 +13,13 @@ app.use(cors());
 // Endpoints
 
 // Displays all recipes in Recipes list
-app.get("/api/recipes", async (req, res) => {
+app.get("/recipes", async (req, res) => {
   const allRecipes = await sequelize.query(`SELECT * FROM recipes`);
   res.status(200).send(allRecipes);
 });
 
 // Allows users to add and remove recipes from favorites list by clicking the heart icon
-app.post("/api/add-remove-favorite", async (req, res) => {
+app.post("/add-remove-favorite", async (req, res) => {
   const { user_id, recipe_id } = req.body;
   const checkFave = await sequelize.query(`
       SELECT * FROM favorites WHERE user_id = '${user_id}' AND  recipe_id = '${recipe_id}'
@@ -41,7 +41,7 @@ app.post("/api/add-remove-favorite", async (req, res) => {
 });
 
 // Displays favorited recipes in Favorites list
-app.post("/api/favorites", async (req, res) => {
+app.post("/favorites", async (req, res) => {
   const { user_id } = req.body;
   const allFaves = await sequelize.query(`
       SELECT recipes.recipe_id, recipes.name, recipes.url_path, recipes.img_src, recipes.img_alt
@@ -53,7 +53,7 @@ app.post("/api/favorites", async (req, res) => {
 });
 
 // Allows users to create an account with an encrypted password and checks that username and email are available
-app.post("/api/signup", async (req, res) => {
+app.post("/signup", async (req, res) => {
   const { firstName, lastName, username, email, password } = req.body;
   const checkUser = await sequelize.query(`
     SELECT * FROM users WHERE username = '${username}' OR email = '${email}'
@@ -83,7 +83,7 @@ app.post("/api/signup", async (req, res) => {
 });
 
 // Allows users to log in and notifies users if password or username is incorrect
-app.post("/api/login", async (req, res) => {
+app.post("/login", async (req, res) => {
   const { username, password } = req.body;
   const validUser = await sequelize
     .query(
