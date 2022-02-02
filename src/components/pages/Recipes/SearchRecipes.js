@@ -14,7 +14,7 @@ const baseURL = window.location.origin
 
   useEffect(() => {
     axios
-      .get(`${baseURL}/api/recipes`)
+      .get(`https://my-veg-cafe-project.herokuapp.com/api/recipes`)
       .then((res) => {
         setRecipes(res.data[0]);
       })
