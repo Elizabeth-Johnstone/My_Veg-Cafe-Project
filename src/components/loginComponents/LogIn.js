@@ -3,8 +3,7 @@ import { useFormik } from "formik";
 import axios from "axios";
 import "./Login.css";
 import { useNavigate } from "react-router-dom";
-import { baseURL } from "../../Deployment.js"
-
+import { baseURL } from "../../Deployment.js";
 
 export default function Login(props) {
   let navigate = useNavigate();
@@ -15,7 +14,7 @@ export default function Login(props) {
 
   const onSubmit = (values) => {
     axios
-      .post(`${baseURL}/api/login`, values)
+      .post(`window.location.origin/api/login`, values)
       .then((res) => {
         localStorage.setItem("ID", res.data.id);
         localStorage.setItem("First name", res.data.firstname);

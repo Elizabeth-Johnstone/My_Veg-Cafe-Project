@@ -13,7 +13,7 @@ app.use(cors());
 // Endpoints
 
 // Displays all recipes in Recipes list
-app.get("/recipes", async (req, res) => {
+app.get("/api/recipes", async (req, res) => {
   const allRecipes = await sequelize.query(`SELECT * FROM recipes`);
   res.status(200).send(allRecipes);
 });
