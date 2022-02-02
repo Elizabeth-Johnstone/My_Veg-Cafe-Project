@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import axios from "axios";
 import "./Login.css";
 import { useNavigate } from "react-router-dom";
+import { baseURL } from "../../Deployment.js"
 
 export default function SignUp(props) {
   let navigate = useNavigate();
@@ -16,7 +17,7 @@ export default function SignUp(props) {
   };
   const onSubmit = (values) => {
     axios
-      .post("http://localhost:4000/signup", values)
+      .post(`${baseURL}/signup`, values)
       .then((res) => {
         localStorage.setItem("ID", res.data[0][0].user_id);
         localStorage.setItem("First name", res.data[0][0].firstname);

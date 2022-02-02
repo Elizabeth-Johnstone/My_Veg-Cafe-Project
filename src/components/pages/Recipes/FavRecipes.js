@@ -2,6 +2,7 @@ import React from "react";
 import "../../../App.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { baseURL } from "../../../Deployment.js"
 
 export default function FavRecipes(props) {
   const handleClick = () => {
@@ -14,7 +15,7 @@ export default function FavRecipes(props) {
     }
 
     axios
-      .post("http://localhost:4000/add-remove-favorite", bodyObj)
+      .post(`${baseURL}/add-remove-favorite`, bodyObj)
       .then((res) => {
         let faveName = res.data[0][0].name
         alert(`${faveName} added to favorites list!`);

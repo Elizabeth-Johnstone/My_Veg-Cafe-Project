@@ -3,13 +3,15 @@ import axios from "axios";
 import "../../../App.css";
 import "./Recipes.css";
 import FavRecipes from "./FavRecipes.js";
+import { baseURL } from "../../../Deployment.js"
+
 
 export default function CardSearch() {
   const [searchTerm, setSearchTerm] = useState("");
   const [recipes, setRecipes] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:4000/recipes")
+      .get(`${baseURL}/recipes`)
       .then((res) => {
         setRecipes(res.data[0]);
       })

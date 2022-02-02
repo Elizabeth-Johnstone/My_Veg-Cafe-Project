@@ -3,6 +3,7 @@ import axios from "axios";
 import "../../../App.css";
 import "../Recipes/Recipes.css";
 import FavRecipes from "../Recipes/FavRecipes.js";
+import { baseURL } from "../../../Deployment.js"
 
 export default function Favorites() {
   const [favorites, setFavorites] = useState([]);
@@ -15,7 +16,7 @@ export default function Favorites() {
 
   useEffect(() => {
     axios
-      .post("http://localhost:4000/favorites", bodyObj)
+      .post(`${baseURL}/favorites`, bodyObj)
       .then((res) => {
         setFavorites(res.data[0]);
       })
