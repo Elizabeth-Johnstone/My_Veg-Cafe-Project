@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-// const path = require("path");
+const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 4000;
 const sequelize = require("./sequelize");
@@ -9,7 +9,7 @@ const bcrypt = require("bcrypt");
 // Middleware
 app.use(express.json());
 app.use(cors());
-// app.use(express.static(path.resolve(__dirname, "../build")));
+app.use(express.static(path.resolve(__dirname, "../build")));
 
 // Endpoints
 
@@ -114,7 +114,7 @@ app.post("/login", async (req, res) => {
 });
 
 sequelize.authenticate();
-// app.get('/*', function (req, res) {
-//   res.sendFile(path.join(__dirname, '../build', 'index.html'));
-// });
+app.get("/*", function (req, res) {
+  res.sendFile(path.join(__dirname, "../build", "index.html"));
+});
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

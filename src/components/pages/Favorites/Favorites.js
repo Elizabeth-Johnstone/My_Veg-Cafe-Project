@@ -23,7 +23,7 @@ export default function Favorites() {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  });
 
   return (
     <div id="recipes-body">
