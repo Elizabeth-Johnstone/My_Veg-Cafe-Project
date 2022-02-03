@@ -6,7 +6,7 @@ Learn more about the developer: www.linkedin.com/in/johnstoneelizabeth/
 
 ## Summary
 
-My Veg Café is a full-stack web application that allows users to explore yummy vegetarian recipes. Users can create an account and save recipes to a "favorites" list for when they are feeling inspired. The recipes on My Veg Café are all real recipes that I make often and I took all of the photos!
+My Veg Café is a full-stack web application that allows users to explore yummy vegetarian recipes. Users can create an account and save recipes to a "favorites" list for when they are feeling inspired. The recipes on My Veg Café are all real recipes that I make often and I took all of the photos! :)
 
 ## MVP
 
